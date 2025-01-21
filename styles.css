@@ -199,10 +199,22 @@ body::before {
     }
 }
 
+.btn-development {
+    color: whitesmoke;
+}
+
  .development {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: x-large;
- } 
+ }
+
+ .scroll-gif {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-top: -200px;
+ }
