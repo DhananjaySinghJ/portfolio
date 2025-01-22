@@ -84,8 +84,13 @@ body::before {
     color: var(--blue);
     margin-bottom: 2rem;
     line-height: 1.6;
-    overflow: hidden;
-    animation: typewriter 2s steps(20) infinite alternate, blink 800ms steps(20) infinite normal;
+    width: 100%;
+}
+
+/* Style for the TypeIt cursor */
+.ti-cursor {
+    color: var(--creme);
+    font-weight: normal;
 }
 
 .profile-image {
@@ -205,37 +210,18 @@ body::before {
     color: whitesmoke;
 }
 
- .development {
+.development {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: x-large;
- }
+}
 
- .scroll-gif {
+.scroll-gif {
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0;
     margin-top: -200px;
- }
-
- @keyframes typewriter {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 50%;
-    }
- }
-
- @keyframes blink {
-    from {
-        border-color: black;
-    }
-
-    to {
-        border-color: transparent;
-    }
- }
+}
