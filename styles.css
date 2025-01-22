@@ -85,7 +85,6 @@ body::before {
     margin-bottom: 2rem;
     line-height: 1.6;
     overflow: hidden;
-    white-space: nowrap;
     animation: typewriter 2s steps(20) infinite alternate, blink 800ms steps(20) infinite normal;
 }
 
