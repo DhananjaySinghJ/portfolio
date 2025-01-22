@@ -71,12 +71,14 @@ body::before {
     color: var(--yellow);
     margin-bottom: 0.5rem;
     font-weight: 700;
+    color: rgb(190 255 5 / var(--tw-text-opacity, 1));
 }
 
 .title {
     font-size: 1.5rem;
     color: var(--pink);
     margin-bottom: 1rem;
+    color: rgb(247 39 152 / var(--tw-text-opacity, 1));
 }
 
 .description {
@@ -224,4 +226,8 @@ body::before {
     text-align: center;
     padding: 0;
     margin-top: -200px;
+}
+
+#typewriter {
+    color: rgba(87, 31, 245, var(--tw-text-opacity, 1));
 }
