@@ -44,6 +44,9 @@ body::before {
 }
 
 .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background: rgba(0, 0, 0, 0.8);
     border: 2px solid var(--creme);
     border-radius: 12px;
@@ -96,10 +99,10 @@ body::before {
 }
 
 .profile-image {
-    flex: 0.4;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .profile-image img {
@@ -110,8 +113,9 @@ body::before {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .social-links a {
@@ -208,6 +212,55 @@ body::before {
     }
 }
 
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-text, .profile-section {
+        flex: 1;
+        width: 100%;
+    }
+
+    .profile-image img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-links img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 8rem; /* Add space below hero section */
+    }
+    
+@media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column-reverse; /* Reverses the order on mobile */
+        }
+    }
+    
+    .scroll-gif {
+        order: 1; /* Ensure scroll gif comes after hero content when stacked */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .scroll-gif img {
+        max-width: 200px; /* Optionally control gif size on mobile */
+    }
+}
+
 .btn-development {
     color: whitesmoke;
 }
@@ -277,4 +330,11 @@ body::before {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.profile-section {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
