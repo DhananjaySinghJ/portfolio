@@ -231,3 +231,31 @@ body::before {
 #typewriter {
     color: rgba(87, 31, 245, var(--tw-text-opacity, 1));
 }
+
+.resume-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    border: 1px solid var(--creme);
+    border-radius: 12px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: var(--yellow);
+    color: black;
+    transform: translateY(-3px);
+}
+
+.resume-btn svg {
+    height: 1.2em;
+    width: 1.2em;
+    color: currentColor;
+}
