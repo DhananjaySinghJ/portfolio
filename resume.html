@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poorva Saini - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: black;
+        }
+        #pdf-viewer {
+            max-width: 90%;
+            max-height: 90vh;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="pdf-viewer"></canvas>
+
+    <script>
+        pdfjsLib.getDocument('./dhananjay-resume.pdf').promise.then(function(pdf) {
+            pdf.getPage(1).then(function(page) {
+                const canvas = document.getElementById('pdf-viewer');
+                const context = canvas.getContext('2d');
+                const viewport = page.getViewport({scale: 1.5});
+                
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                });
+            });
+        });
+    </script>
+</body>
+</html>

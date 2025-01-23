@@ -263,3 +263,18 @@ body::before {
     width: 1.2em;
     color: currentColor;
 }
+
+#pdf-viewer {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--creme);
+    box-shadow: 10px -10px 1px var(--creme);
+}
+
+.pdf-resume {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
