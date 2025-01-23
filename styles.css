@@ -238,7 +238,7 @@ body::before {
     gap: 10px;
     justify-content: center;
     padding: 10px 20px;
-    background-color: var(--blue);
+    background-color: rgb(87 31 245 / var(--tw-bg-opacity, 1));
     border: 1px solid var(--creme);
     border-radius: 12px;
     color: whitesmoke;
@@ -246,6 +246,10 @@ body::before {
     font-size: 1.2rem;
     font-weight: 500;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    width: fit-content;
+    max-width: 250px;
+    margin: 0 auto;
+
 }
 
 .resume-btn:hover {
